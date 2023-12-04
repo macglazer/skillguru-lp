@@ -16,12 +16,18 @@
     "typecheck": "tsc --noEmit"
   },
   "dependencies": {
+    "classnames": "^2.3.2",
     "gatsby": "^5.12.4",
+    "gatsby-plugin-brotli": "^2.1.0",
+    "gatsby-plugin-htaccess-redirects": "^0.2.3",
+    "gatsby-plugin-html-attributes": "^1.0.5",
     "gatsby-plugin-image": "^3.12.3",
     "gatsby-plugin-manifest": "^5.12.3",
+    "gatsby-plugin-robots-txt": "^1.8.0",
     "gatsby-plugin-sass": "^6.12.3",
     "gatsby-plugin-sharp": "^5.12.3",
     "gatsby-plugin-sitemap": "^6.12.3",
+    "gatsby-plugin-zopfli": "^2.0.0",
     "gatsby-source-filesystem": "^5.12.1",
     "gatsby-transformer-sharp": "^5.12.3",
     "react": "^18.2.0",
@@ -32,6 +38,7 @@
     "@types/node": "^20.3.3",
     "@types/react": "^18.2.14",
     "@types/react-dom": "^18.2.6",
+    "typed-scss-modules": "^8.0.0",
     "typescript": "^5.1.6"
   }
 }

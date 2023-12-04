@@ -1,0 +1,51 @@
+@use '@styles/variables' as *;
+
+@mixin responsive-title($size-mobile, $size-desktop) {
+	font-size: $size-mobile;
+
+	@media screen and (min-width: $md) {
+		font-size: calc(
+			($size-mobile + ($size-mobile + ($size-desktop - $size-mobile) / 2)) / 2
+		);
+	}
+	@media screen and (min-width: $lg) {
+		font-size: calc($size-mobile + ($size-desktop - $size-mobile) / 2);
+	}
+	@media screen and (min-width: $xl) {
+		font-size: $size-desktop;
+	}
+}
+
+.title {
+	color: $dark-color;
+	font-style: normal;
+	font-weight: 700;
+	line-height: 1.23em;
+
+	&--main {
+		@include responsive-title(30px, 60px);
+	}
+	&--section {
+		margin-bottom: 20px;
+		@include responsive-title(26px, 36px);
+	}
+	&--standard {
+		margin-bottom: 20px;
+		@include responsive-title(20px, 26px);
+	}
+}
+
+.section-subtitle {
+	text-transform: uppercase;
+	color: $primary-color;
+	font-size: 20px;
+	font-weight: 700;
+	font-style: normal;
+	line-height: 28px;
+	letter-spacing: 0.02px;
+	margin-bottom: 30px;
+
+	@media screen and (min-width: $md) {
+		margin-bottom: 40px;
+	}
+}
