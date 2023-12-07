@@ -34,6 +34,12 @@ const config: GatsbyConfig = {
 			__key: 'images',
 		},
 		{
+			resolve: 'gatsby-plugin-anchor-links',
+			options: {
+				offset: -116,
+			},
+		},
+		{
 			resolve: 'gatsby-plugin-htaccess-redirects',
 			options: {
 				prefix:

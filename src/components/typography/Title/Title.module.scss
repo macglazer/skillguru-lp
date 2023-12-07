@@ -22,30 +22,15 @@
 	font-weight: 700;
 	line-height: 1.23em;
 
-	&--main {
-		@include responsive-title(30px, 60px);
+	&[data-variant='main'] {
+		@include responsive-title(25px, 40px);
 	}
-	&--section {
+	&[data-variant='section'] {
 		margin-bottom: 20px;
-		@include responsive-title(26px, 36px);
+		@include responsive-title(26px, 30px);
 	}
-	&--standard {
+	&[data-variant='standard'] {
 		margin-bottom: 20px;
-		@include responsive-title(20px, 26px);
-	}
-}
-
-.section-subtitle {
-	text-transform: uppercase;
-	color: $primary-color;
-	font-size: 20px;
-	font-weight: 700;
-	font-style: normal;
-	line-height: 28px;
-	letter-spacing: 0.02px;
-	margin-bottom: 30px;
-
-	@media screen and (min-width: $md) {
-		margin-bottom: 40px;
+		font-size: 20px;
 	}
 }

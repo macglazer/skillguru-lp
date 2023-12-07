@@ -2,6 +2,8 @@ import React, {useMemo} from 'react';
 // Types
 import {Tag} from '@customTypes/tags';
 import {Common} from '@customTypes/main';
+// styles
+import * as styles  from './Container.module.scss'
 
 interface ContainerProps extends Common {
 	as: Tag;
@@ -15,7 +17,7 @@ const Container = (props: ContainerProps) => {
 
 	return (
 		<ElementTag className={classes} id={id}>
-			<div className='container' data-type={fluid ? 'fluid' : 'default'}>
+			<div className={styles.container} data-type={fluid ? 'fluid' : 'default'}>
 				{children}
 			</div>
 		</ElementTag>

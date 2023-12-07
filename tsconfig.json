@@ -115,6 +115,7 @@
 		"./plugins/**/*",
 		"src/**/*.ts",
 		"src/**/*.tsx",
+		"src/**/*.module.scss",
 		"src/**/*.scss",
 		"src/**/*.png",
 		"src/**/*.jpg",

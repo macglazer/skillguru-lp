@@ -2,7 +2,9 @@
 import React from 'react';
 import classNames from 'classnames';
 // Types
-import {Common} from '@customTypes/main';
+import {Common, FontColors} from '@customTypes/main';
+// Styles
+import * as styles from './Title.module.scss'
 
 export enum TitleTag {
 	h1 = 'h1',
@@ -14,22 +16,22 @@ export enum TitleTag {
 }
 
 export enum TitleVariant {
-	main = 'title--main',
-	section = 'title--section',
-	sectionSubtitle = 'section-subtitle',
-	standard = 'title--standard',
+	main = 'main',
+	section = 'section',
+	standard = 'standard',
 }
 
 interface Title extends Common {
 	tag: TitleTag;
 	variant: TitleVariant;
+	color: FontColors;
 }
 
 const SectionTitle = (props: Title) => {
-	const {classes, id, children, tag: Tag, variant} = props;
+	const {classes, id, children, tag: Tag, variant, color = FontColors.dark} = props;
 
 	return (
-		<Tag id={id} className={classNames('title', variant, classes)}>
+		<Tag id={id} className={classNames(styles.title, classes)} data-variant={variant} data-color={color}>
 			{children}
 		</Tag>
 	);

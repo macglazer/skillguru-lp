@@ -1,0 +1,14 @@
+@use './variables' as *;
+
+*[data-color='light'] {
+	color: $light-color;
+}
+*[data-color='dark'] {
+	color: $dark-color;
+}
+*[data-color='yellow'] {
+	color: $yellow-color;
+}
+*[data-color='green'] {
+	color: $success-color;
+}
