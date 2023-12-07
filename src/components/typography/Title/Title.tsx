@@ -24,7 +24,7 @@ export enum TitleVariant {
 interface Title extends Common {
 	tag: TitleTag;
 	variant: TitleVariant;
-	color: FontColors;
+	color?: FontColors;
 }
 
 const SectionTitle = (props: Title) => {

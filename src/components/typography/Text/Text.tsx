@@ -7,7 +7,7 @@ import * as styles  from './Text.module.scss';
 
 interface TextProps extends Common {
 	as?: 'p' | 'span';
-	color: FontColors;
+	color?: FontColors;
 }
 
 const Text = ({children, classes, as: Tag = 'p', color}: TextProps) => (

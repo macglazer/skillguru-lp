@@ -1,4 +1,6 @@
+// Libraries
 import React, {useMemo} from 'react';
+import classNames from 'classnames';
 // Types
 import {Tag} from '@customTypes/tags';
 import {Common} from '@customTypes/main';
@@ -17,7 +19,7 @@ const Container = (props: ContainerProps) => {
 
 	return (
 		<ElementTag className={classes} id={id}>
-			<div className={styles.container} data-type={fluid ? 'fluid' : 'default'}>
+			<div className={classNames(styles.container, 'container')} data-type={fluid ? 'fluid' : 'default'}>
 				{children}
 			</div>
 		</ElementTag>
