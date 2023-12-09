@@ -1,0 +1,10 @@
+@use '@styles/variables' as *;
+
+.spacer{
+  height: 82px;
+  margin-bottom: 20px;
+  
+  @media screen and (min-width: $md) {
+    height: 95px;
+  }
+}

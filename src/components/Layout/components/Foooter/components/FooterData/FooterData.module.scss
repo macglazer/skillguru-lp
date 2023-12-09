@@ -1,0 +1,14 @@
+.footer-data {
+	&-title {
+		margin-bottom: 24px;
+	}
+
+	&-text {
+		a {
+			display: block;
+      max-width: max-content;
+			color: #7884a6;
+      margin-top: 10px;
+		}
+	}
+}

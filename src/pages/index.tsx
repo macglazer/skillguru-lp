@@ -8,6 +8,7 @@ import Button, {ButtonVariant} from '@components/Button/Button';
 
 const IndexPage: React.FC<PageProps> = () => {
 	return (
+		<>
 		<Container as={Tag.Main}>
 			<SectionWrapper title='Test'>
 				<Button>asd</Button>
@@ -16,6 +17,7 @@ const IndexPage: React.FC<PageProps> = () => {
 				<Button variant={ButtonVariant.Outline}>asd</Button>
 			</SectionWrapper>
 		</Container>
+		</>
 	);
 };
 

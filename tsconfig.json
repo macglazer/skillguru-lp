@@ -105,7 +105,8 @@
 			"@typography/*": ["src/components/typography/*"],
 			"@customTypes/*": ["src/types/*"],
 			"@styles/*": ["src/styles/*"],
-			"@fonts/*": ["src/fonts/*"]
+			"@fonts/*": ["src/fonts/*"],
+			"@hooks/*": ["src/utils/hooks/*"]
 		}
 	},
 	"include": [
