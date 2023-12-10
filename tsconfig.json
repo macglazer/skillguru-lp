@@ -106,7 +106,9 @@
 			"@customTypes/*": ["src/types/*"],
 			"@styles/*": ["src/styles/*"],
 			"@fonts/*": ["src/fonts/*"],
-			"@hooks/*": ["src/utils/hooks/*"]
+			"@hooks/*": ["src/utils/hooks/*"],
+			"@icons/*": ["src/assets/icons/*"],
+			"@sections/*": ["src/sections/*"]
 		}
 	},
 	"include": [

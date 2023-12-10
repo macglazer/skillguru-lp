@@ -25,6 +25,15 @@
 	text-rendering: optimizeLegibility;
 }
 
+@font-face {
+	font-display: swap;
+	font-family: 'OpenSans';
+	font-style: normal;
+	font-weight: 800;
+	src: local('Montserrat'), url('@fonts/OpenSans-Bold.woff2');
+	text-rendering: optimizeLegibility;
+}
+
 *,
 *:before,
 *:after {

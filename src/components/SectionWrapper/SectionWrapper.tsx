@@ -20,7 +20,7 @@ interface SectionWrapperProps extends Common {
   as?: Tag;
 	bgColor?: SectionWrpperColor;
 	title: string;
-	text?: string;
+	text?: React.ReactNode;
 }
 
 const SectionWrapper = (props: SectionWrapperProps) => {
