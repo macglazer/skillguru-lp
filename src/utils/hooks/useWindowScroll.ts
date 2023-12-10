@@ -1,7 +1,7 @@
 import {useEffect, useState} from 'react';
 
 // Returns current window sizes
-const useWindowSize = () => {
+const useWindowScroll = () => {
 	const isClient = typeof window === 'object';
 
 	const getScroll = () => (isClient ? window.scrollY : 0);
@@ -27,4 +27,4 @@ const useWindowSize = () => {
 	return windowScroll;
 };
 
-export default useWindowSize;
+export default useWindowScroll;

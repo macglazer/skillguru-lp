@@ -1,0 +1,71 @@
+@use '@styles/variables' as *;
+
+.card {
+	width: 277px;
+	border-radius: 20px;
+}
+
+.content {
+	width: 100%;
+	padding: 21px 19px 30px;
+	border-radius: 20px;
+	background: $light-color;
+	color: $dark-color;
+}
+
+.range {
+	font-size: 12px;
+	font-weight: 600;
+	line-height: 22px;
+	display: flex;
+	justify-content: flex-end;
+	margin-bottom: 10px;
+
+	&:before {
+		content: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="15" viewBox="0 0 16 15" fill="none"><path d="M4.85612 15C5.45701 15 6.05776 14.8206 6.56831 14.4617L8.0001 13.4551L9.43175 14.4617C10.4526 15.1794 11.8351 15.1794 12.8561 14.4617C13.8769 13.744 14.3042 12.4718 13.9143 11.3104L13.3674 9.68173L14.7991 8.67515C15.8201 7.95738 16.2472 6.68518 15.8572 5.52386C15.4674 4.36248 14.3489 3.57623 13.087 3.57623H11.3173L10.7705 1.94763C10.3805 0.786313 9.26202 0 8.0001 0C6.73817 0 5.61983 0.786247 5.22984 1.94756L4.68286 3.57623H2.91311C1.65118 3.57623 0.532701 4.36248 0.142716 5.52386C-0.247131 6.68518 0.179966 7.95738 1.20092 8.67515L2.63272 9.68173L2.08574 11.3104C1.69589 12.4717 2.12298 13.744 3.14393 14.4617C3.65447 14.8206 4.25522 15 4.85612 15Z" fill="%23252B61"/></svg>');
+		display: inline-block;
+		margin-right: 8px;
+	}
+}
+
+.profile {
+	width: 114px;
+	height: 114px;
+	border-radius: 50%;
+	overflow: hidden;
+	margin: 0 auto 9px;
+
+	img {
+		width: 100%;
+		object-fit: cover;
+	}
+}
+
+.name {
+	text-align: center;
+	font-size: 16px;
+	font-weight: 600;
+	line-height: 22px;
+}
+
+.position {
+	text-align: center;
+	font-size: 12px;
+	font-weight: 400;
+	line-height: 22px;
+	margin-bottom: 15px;
+}
+
+.company {
+	display: flex;
+	align-items: flex-end;
+	justify-content: center;
+	height: 70px;
+	border-top: 1.5px solid #eff4f9;
+
+	img {
+		max-height: 90%;
+		max-width: 50%;
+		object-fit: contain;
+	}
+}

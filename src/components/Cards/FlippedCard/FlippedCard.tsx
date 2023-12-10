@@ -38,6 +38,7 @@ const FlippedCard = (props: FlippedCardProps) => {
 
 					<div className={styles.cardActions}>
 						<button
+							aria-label='Pokaż opis'
 							className={styles.cardBtn}
 							onClick={() => setIsFlipped(true)}></button>
 						{icon}
@@ -55,6 +56,7 @@ const FlippedCard = (props: FlippedCardProps) => {
 					</div>
 					<div className={styles.cardActions}>
 						<button
+							aria-label='Pokaż tytuł'
 							className={classNames(styles.cardBtn, styles.cardBtnReverse)}
 							onClick={() => setIsFlipped(false)}></button>
 						<Link
