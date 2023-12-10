@@ -1,0 +1,119 @@
+@use '@styles/variables' as *;
+
+.card {
+	width: 285px;
+	height: 375px;
+
+	perspective: 1000px;
+
+	&-container {
+		width: inherit;
+		height: inherit;
+
+		position: relative;
+		transform-style: preserve-3d;
+		transition: transform 0.48s;
+	}
+
+	&-front,
+	&-back {
+		position: absolute;
+		top: 0;
+		left: 0;
+		display: flex;
+		flex-direction: column;
+		justify-content: space-between;
+		align-items: center;
+		width: 100%;
+		height: 100%;
+		border-radius: 24px;
+		backface-visibility: hidden;
+		overflow: hidden;
+	}
+
+	&-actions {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		width: 100%;
+	}
+
+	&-front {
+		padding: 50px 24px 25px 25px;
+		background-color: var(--flip-front-color);
+		transform: rotateY(0deg);
+		z-index: 2;
+		text-align: center;
+
+		.card-actions {
+			align-items: flex-end;
+		}
+	}
+
+	&-back {
+		padding: 35px 25px 25px;
+		background-color: $gray-color;
+		transform: rotateY(180deg);
+		z-index: 1;
+
+		&-title[data-variant='standard'] {
+			margin-bottom: 10px;
+		}
+	}
+
+	&-text {
+		display: -webkit-box;
+		-webkit-box-orient: vertical;
+		-webkit-line-clamp: 12;
+		overflow: hidden;
+		color: $dark-color;
+		font-size: 12px;
+		line-height: 18px;
+	}
+
+	&-btn {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		width: 50px;
+		height: 50px;
+		background-color: $secondary-color;
+		border-radius: 50%;
+		outline: none;
+
+		&::before {
+			content: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="15" height="26" viewBox="0 0 15 26" fill="none"><path d="M1.49577 25.2826C1.12183 25.2826 0.747874 25.133 0.448725 24.8338C-0.149575 24.2354 -0.149575 23.3378 0.448725 22.7394L10.545 12.6413L0.448725 2.54326C-0.149575 1.94485 -0.149575 1.04721 0.448725 0.448803C1.04702 -0.149601 1.94451 -0.149601 2.54281 0.448803L13.6862 11.5941C14.2845 12.1925 14.2845 13.0902 13.6862 13.6886L2.54281 24.8338C2.24366 25.133 1.8697 25.2826 1.49577 25.2826Z" fill="white"/></svg>');
+		}
+
+		&-reverse {
+			&:before {
+				content: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="15" height="26" viewBox="0 0 15 26" fill="none"><path d="M13.1712 25.7826C13.5452 25.7826 13.9191 25.633 14.2183 25.3338C14.8166 24.7354 14.8166 23.8378 14.2183 23.2394L4.12196 13.1413L14.2183 3.04326C14.8166 2.44485 14.8166 1.54721 14.2183 0.948803C13.62 0.350399 12.7225 0.350399 12.1242 0.948803L0.980836 12.0941C0.382536 12.6925 0.382536 13.5902 0.980836 14.1886L12.1242 25.3338C12.4233 25.633 12.7973 25.7826 13.1712 25.7826Z" fill="white"/></svg>');
+			}
+		}
+	}
+
+	&-link {
+		color: $link-color;
+		text-align: right;
+		font-size: 16px;
+		font-weight: 700;
+		line-height: 22px;
+		text-decoration-line: underline;
+		outline: none;
+	}
+
+	&[data-is-flipped='true'] {
+		.card-container {
+			transform: rotateY(180deg);
+		}
+	}
+
+	@media screen and (hover: hover) and (pointer: fine) {
+		&:hover,
+		&:focus-within {
+			.card-container {
+				transform: rotateY(180deg);
+			}
+		}
+	}
+}

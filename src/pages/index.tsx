@@ -6,6 +6,7 @@ import Container from '@components/Container/Container';
 // Sections
 import Header from '@sections/HomePage/Header/Header';
 import HowItWorks from '@sections/HomePage/HowItWorks/HowItWorks';
+import Sessions from '@sections/HomePage/Sessions/Sessions';
 // Types
 import {Tag} from '@customTypes/tags';
 
@@ -15,6 +16,7 @@ const IndexPage: React.FC<PageProps> = () => {
 			<Header />
 			<Container as={Tag.Main}>
 				<HowItWorks />
+				<Sessions />
 			</Container>
 		</>
 	);

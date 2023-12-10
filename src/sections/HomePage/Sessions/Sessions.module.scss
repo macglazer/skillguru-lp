@@ -1,0 +1,38 @@
+@use '@styles/variables' as *;
+
+.wrapper {
+	margin-top: 40px;
+  margin-bottom: 40px;
+}
+
+.title {
+	text-align: center;
+}
+
+.text {
+	max-width: 516px;
+	margin: 0 auto 40px;
+	text-align: center;
+}
+
+.cardsWrapper {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	gap: 20px;
+	margin-left: -15px;
+	margin-right: -15px;
+}
+
+.more {
+  display: block;
+  margin-top: 20px;
+  margin-left: auto;
+	color: $link-color;
+  max-width: max-content;
+	font-size: 16px;
+	font-style: normal;
+	font-weight: 700;
+	line-height: 22px;
+	text-decoration-line: underline;
+}
