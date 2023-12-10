@@ -51,7 +51,7 @@ const Footer = () => {
 		<Container as={Tag.Footer} classes={styles.footer}>
 			<div className={styles.footerContent}>
 				<Data />
-				<div />
+				<div className={styles.separator}/>
 				{linkGroups.map((item, index) => (
 					<FooterLinks key={index} {...item} />
 				))}

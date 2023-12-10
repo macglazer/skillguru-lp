@@ -33,7 +33,7 @@
 	@media screen and (min-width: $sm) {
 		margin: 40px 0 0;
 		grid-template-columns: 1.75fr 1fr;
-		grid-template-areas: 'content pricing' 'steps pricing' '. pricing';
+		grid-template-areas: 'content pricing' 'steps pricing';
 	}
 
 	@media screen and (min-width: $md) {
@@ -41,19 +41,23 @@
 	}
 
 	@media screen and (min-width: $lg) {
-		padding: 55px 32px 35px;
+		padding: 27px 32px 35px;
 		grid-template-columns: 1.5fr 1.25fr;
 		margin-top: 60px;
 	}
 
 	@media screen and (min-width: $xl) {
-		padding: 55px 32px 35px 64px;
+		padding: 27px 32px 35px 64px;
 		grid-template-columns: 1fr 1.45fr;
 	}
 }
 
-.cotnent {
+.content {
 	grid-area: content;
+
+	@media screen and (min-width: $lg) {
+		padding-top: 30px;
+	}
 }
 
 .steps {
@@ -72,7 +76,7 @@
 		width: 546px;
 		height: 569px;
 		object-fit: contain;
-    margin-bottom: -20px;
+		margin-bottom: -20px;
 	}
 
 	@media screen and (min-width: $lg) {

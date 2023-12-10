@@ -37,10 +37,10 @@ const Meetings = () => {
 					</Text>
 				</div>
 				<div className={styles.steps}>
-					<GatsbyImage image={steps} alt='kroki' />
+					{steps && <GatsbyImage image={steps} alt='kroki' />}
 				</div>
 				<div className={styles.pricing}>
-					<GatsbyImage image={pricing} alt='ceny' />
+					{pricing && <GatsbyImage image={pricing} alt='ceny' />}
 				</div>
 			</div>
 		</SectionWrapper>

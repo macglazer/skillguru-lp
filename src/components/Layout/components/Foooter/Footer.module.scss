@@ -25,10 +25,34 @@
 
 	&-content {
 		display: grid;
-		grid-template-columns: auto 1fr auto auto auto;
 		gap: 32px 64px;
+		padding-top: 54px;
+		padding-bottom: 54px;
 		> * {
-			grid-column: span 1;
+			grid-column: 1/-1;
+		}
+
+		@media screen and (min-width: $xs) {
+			grid-template-columns: 1fr 1fr;
+
+			> * {
+				grid-column: span 1;
+			}
+		}
+		@media screen and (min-width: $sm) {
+			grid-template-columns: 1fr 1fr 1fr;
+
+			> .separator{
+				grid-column: 2/4;
+			}
+		}
+
+		@media screen and (min-width: $md) {
+			grid-template-columns: auto 1fr auto auto auto;
+
+			> .separator{
+				grid-column: span 1;
+			}
 		}
 	}
 }
