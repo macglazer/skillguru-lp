@@ -6,10 +6,14 @@ import SectionWrapper from '@components/SectionWrapper/SectionWrapper';
 import {Tag} from '@customTypes/tags';
 import Button, {ButtonVariant} from '@components/Button/Button';
 
+import Header from '../sections/HomePage/Header/Header';
+
 const IndexPage: React.FC<PageProps> = () => {
 	return (
 		<>
+		<Header/>
 		<Container as={Tag.Main}>
+
 			<SectionWrapper title='Test'>
 				<Button>asd</Button>
 				<Button variant={ButtonVariant.Dark}>asd</Button>

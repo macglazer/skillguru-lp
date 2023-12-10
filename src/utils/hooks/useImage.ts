@@ -38,7 +38,7 @@ const useImage = (): IImageData => {
 		edges.forEach(({node}: {node: IImageNode}) => {
 			images = {
 				...images,
-				[node.resize.originalName]: getImage(node.gatsbyImageData),
+				[node.resize.originalName.replace(/\.[^/.]+$/, "")]: getImage(node.gatsbyImageData),
 			};
 		});
 
