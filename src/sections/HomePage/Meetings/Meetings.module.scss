@@ -1,0 +1,81 @@
+@use '@styles/variables' as *;
+
+.meetings {
+	margin-bottom: 40px;
+	:global {
+		.container {
+			padding-bottom: 0;
+		}
+	}
+
+	@media screen and (min-width: $lg) {
+		margin-bottom: 60px;
+
+		:global {
+			.container {
+				padding-left: 55px;
+				padding-right: 48px;
+				padding-bottom: 50px;
+			}
+		}
+	}
+}
+
+.container {
+	display: grid;
+	gap: 20px;
+	margin: 40px -15px 0;
+	padding: 40px 18px 0;
+	border-radius: 20px;
+	background-color: $secondary-color;
+	grid-template-areas: 'content' 'steps' 'pricing';
+
+	@media screen and (min-width: $sm) {
+		margin: 40px 0 0;
+		grid-template-columns: 1.75fr 1fr;
+		grid-template-areas: 'content pricing' 'steps pricing' '. pricing';
+	}
+
+	@media screen and (min-width: $md) {
+		gap: 0 30px;
+	}
+
+	@media screen and (min-width: $lg) {
+		padding: 55px 32px 35px;
+		grid-template-columns: 1.5fr 1.25fr;
+		margin-top: 60px;
+	}
+
+	@media screen and (min-width: $xl) {
+		padding: 55px 32px 35px 64px;
+		grid-template-columns: 1fr 1.45fr;
+	}
+}
+
+.cotnent {
+	grid-area: content;
+}
+
+.steps {
+	grid-area: steps;
+	justify-self: center;
+}
+
+.pricing {
+	grid-area: pricing;
+	overflow: hidden;
+	margin-right: -15px;
+	margin-left: -15px;
+	justify-self: end;
+
+	img {
+		width: 546px;
+		height: 569px;
+		object-fit: contain;
+    margin-bottom: -20px;
+	}
+
+	@media screen and (min-width: $lg) {
+		margin-right: -32px;
+	}
+}

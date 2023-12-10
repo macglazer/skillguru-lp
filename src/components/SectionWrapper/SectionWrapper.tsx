@@ -13,11 +13,12 @@ import {TitleTag, TitleVariant} from '@components/typography/Title/Title';
 
 export enum SectionWrpperColor {
 	Secondary = 'secondary',
+	Dark = 'dark',
 	Gray = 'gray',
 }
 
 interface SectionWrapperProps extends Common {
-  as?: Tag;
+	as?: Tag;
 	bgColor?: SectionWrpperColor;
 	title: string;
 	text?: React.ReactNode;
@@ -30,22 +31,22 @@ const SectionWrapper = (props: SectionWrapperProps) => {
 		title,
 		bgColor = SectionWrpperColor.Gray,
 		text,
+		classes,
 	} = props;
 
 	return (
 		<Container
 			as={as}
-			classes={classNames(styles.wrapper, {
+			classes={classNames(styles.wrapper, classes, {
 				[styles.wrapperGray]: bgColor === SectionWrpperColor.Gray,
 				[styles.wrapperSecondary]: bgColor === SectionWrpperColor.Secondary,
+				[styles.wrapperDark]: bgColor === SectionWrpperColor.Dark,
 			})}>
 			<Title
 				tag={TitleTag.h2}
 				variant={TitleVariant.section}
 				color={
-					bgColor === SectionWrpperColor.Secondary
-						? FontColors.light
-						: FontColors.dark
+					bgColor === SectionWrpperColor.Gray ? FontColors.dark : FontColors.light
 				}
 				classes={styles.wrapperTitle}>
 				{title}

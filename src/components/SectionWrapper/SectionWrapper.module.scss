@@ -28,6 +28,10 @@
 		background-color: $gray-color;
 	}
 
+	&--dark {
+		background-color: #0E1130;
+	}
+
 	@media screen and (min-width: $sm) {
 		margin-left: 0;
 		margin-right: 0;

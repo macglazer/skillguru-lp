@@ -8,6 +8,7 @@ import Header from '@sections/HomePage/Header/Header';
 import HowItWorks from '@sections/HomePage/HowItWorks/HowItWorks';
 import Sessions from '@sections/HomePage/Sessions/Sessions';
 import Mentors from '@sections/HomePage/Mentors/Mentors';
+import Meetings from '@sections/HomePage/Meetings/Meetings';
 // Types
 import {Tag} from '@customTypes/tags';
 
@@ -18,6 +19,7 @@ const IndexPage: React.FC<PageProps> = () => {
 			<Container as={Tag.Main}>
 				<HowItWorks />
 				<Sessions />
+				<Meetings />
 				<Mentors />
 			</Container>
 		</>
