@@ -23,7 +23,7 @@ const Mentors = () => {
 			arrows: false,
 			autoplay: true,
 			autoplaySpeed: 4000,
-			slidesToShow: window.innerWidth / 297,
+			slidesToShow: width / 297,
 			slidesToScroll: 1,
 		}),
 		[width]
