@@ -4,7 +4,12 @@
 	width: calc(100% + 30px);
   margin-left: -15px;
   margin-top: 40px;
-  padding-bottom: 20px;
+	
+	:global{
+		.slick-track{
+			padding-bottom: 20px;
+		}
+	}
 
 	@media screen and (min-width: $sm) {
 		width: calc(100vw - 15px);
@@ -13,7 +18,12 @@
 
   @media screen and (min-width: $md) {
     margin-top: 60px;
-    padding-bottom: 30px;
+		
+		:global{
+			.slick-track{
+				padding-bottom: 30px;
+			}
+		}
   }
 
 	@media screen and (min-width: ($xl + 45px)) {
