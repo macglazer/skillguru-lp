@@ -11,7 +11,9 @@
 	background-color: #fff;
 	border-radius: 20px;
 	box-shadow: 0px 10px 50px 0px rgba(142, 142, 142, 0.22);
-	transform: translateX(-50%);
+	opacity: 0;
+	transform: translateX(-50%) translateY(50%);
+	transition: opacity 0.24s, transform 0.24s;
 
 	&-btn {
 		position: absolute;
@@ -19,12 +21,12 @@
 		right: 25px;
 	}
 
-	&-content{
+	&-content {
 		display: flex;
 		align-items: start;
 		gap: 22px;
 
-		svg{
+		svg {
 			min-width: 40px;
 		}
 	}
@@ -43,10 +45,15 @@
 		}
 	}
 
-	&-actions{
+	&-actions {
 		display: flex;
 		flex-wrap: wrap;
 		gap: 16px 20px;
 		margin-top: 33px;
+	}
+
+	&[data-is-visible='true'] {
+		opacity: 1;
+		transform: translateX(-50%) translateY(0);
 	}
 }

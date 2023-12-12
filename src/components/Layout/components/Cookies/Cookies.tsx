@@ -15,16 +15,16 @@ const Cookies = () => {
 		setTimeout(() => setVisible(true), 5000);
 	}, []);
 
-	const acceptCookiesHandler = () => {
+	const acceptCookiesHandler = (value: boolean) => {
 		setVisible(false);
-		localStorage?.setItem('cookiesPolicyAccepted_skillguru', 'true');
+		localStorage?.setItem('cookiesPolicyAccepted_skillguru', value.toString());
 	};
 
 	return (
 		<aside className={styles.cookies} data-is-visible={visible}>
 			<button
 				className={styles.cookiesBtn}
-				onClick={acceptCookiesHandler}
+				onClick={() => setVisible(false)}
 				aria-label='Zamknij'>
 				<Close />
 			</button>
@@ -39,8 +39,8 @@ const Cookies = () => {
 				</p>
 			</div>
 			<div className={styles.cookiesActions}>
-				<Button onClick={acceptCookiesHandler}>Ok</Button>
-				<Button variant={ButtonVariant.Outline} onClick={acceptCookiesHandler}>
+				<Button onClick={() => acceptCookiesHandler(true)}>Ok</Button>
+				<Button variant={ButtonVariant.Outline} onClick={() => acceptCookiesHandler(true)}>
 					Odruć wszystkie
 				</Button>
 			</div>
