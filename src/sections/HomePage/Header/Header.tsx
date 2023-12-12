@@ -1,13 +1,11 @@
 // Libraries
 import React from 'react';
 import {Link} from 'gatsby';
-import {GatsbyImage} from 'gatsby-plugin-image';
+import {StaticImage} from 'gatsby-plugin-image';
 // Components
 import Container from '@components/Container/Container';
 import {Title, Text} from '@components/typography';
 import Button from '@components/Button/Button';
-// Hooks
-import useImage from '@hooks/useImage';
 // Types
 import {Tag} from '@customTypes/tags';
 import {TitleTag, TitleVariant} from '@components/typography/Title/Title';
@@ -16,12 +14,10 @@ import {FontColors} from '@customTypes/main';
 import * as styles from './Header.module.scss';
 
 const Header = () => {
-	const {hand} = useImage();
-
 	return (
 		<Container as={Tag.Header} classes={styles.header}>
 			<div className={styles.headerImage}>
-				{hand && <GatsbyImage image={hand} alt='Ręka' />}
+		 <StaticImage src={'../../../assets/images/hand.png'} alt='Ręka' />
 			</div>
 			<div className={styles.headerContent}>
 				<Title

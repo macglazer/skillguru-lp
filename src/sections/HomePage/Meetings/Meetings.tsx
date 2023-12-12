@@ -1,13 +1,11 @@
 // Libraries
 import React from 'react';
-import {GatsbyImage} from 'gatsby-plugin-image';
+import {StaticImage} from 'gatsby-plugin-image';
 // Components
 import SectionWrapper, {
 	SectionWrpperColor,
 } from '@components/SectionWrapper/SectionWrapper';
 import {Title, Text} from '@components/typography';
-// Hooks
-import useImage from '@hooks/useImage';
 // Types
 import {TitleTag, TitleVariant} from '@components/typography/Title/Title';
 import {FontColors} from '@customTypes/main';
@@ -15,8 +13,6 @@ import {FontColors} from '@customTypes/main';
 import * as styles from './Meetings.module.scss';
 
 const Meetings = () => {
-	const {steps, pricing} = useImage();
-
 	return (
 		<SectionWrapper
 			title='Cykl spotkań - Mentoring'
@@ -37,10 +33,10 @@ const Meetings = () => {
 					</Text>
 				</div>
 				<div className={styles.steps}>
-					{steps && <GatsbyImage image={steps} alt='kroki' />}
+					<StaticImage src={'../../../assets/images/steps.png'} alt='kroki' />
 				</div>
 				<div className={styles.pricing}>
-					{pricing && <GatsbyImage image={pricing} alt='ceny' />}
+					<StaticImage src={'../../../assets/images/pricing.png'} alt='ceny' />
 				</div>
 			</div>
 		</SectionWrapper>
