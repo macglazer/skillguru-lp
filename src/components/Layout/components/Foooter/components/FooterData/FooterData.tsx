@@ -2,7 +2,7 @@
 import React from 'react';
 // Components
 import {Text} from '@components/typography';
-import SocialMedia from '../SocialMedia';
+import SocialMedia from '../SocialMedia/SocialMedia';
 // Types
 import {FontColors} from '@customTypes/main';
 // Styles
