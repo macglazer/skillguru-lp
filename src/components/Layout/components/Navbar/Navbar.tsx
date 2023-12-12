@@ -45,9 +45,15 @@ const Navbar = () => {
 			toggleExpandHandler,
 		},
 		{
-			text: 'sda',
+			text: 'Zostań Mentorem',
 			link: '/',
-			isHiglited: true,
+			isHiglited: 'outline',
+			toggleExpandHandler,
+		},
+		{
+			text: 'Zaloguj się',
+			link: '/',
+			isHiglited: 'primary',
 			toggleExpandHandler,
 		},
 	];
@@ -64,13 +70,13 @@ const Navbar = () => {
 				[styles.navbarScrolled]: isScrolled,
 			})}>
 			<Link to={'/'} className='navbar__logo' onClick={() => setIsExpanded(false)}>
-				{/* <StaticImage
-					src='../../../assets/images/logo-dark.svg'
+				<StaticImage
+					src='../../../../assets/images/logo.png'
 					alt='Innovate tech solutions'
 					loading='lazy'
 					placeholder='blurred'
 					formats={['auto', 'webp']}
-				/> */}
+				/>
 			</Link>
 			<button
 				onClick={toggleExpandHandler}

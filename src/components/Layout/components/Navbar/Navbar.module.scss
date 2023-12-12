@@ -66,16 +66,16 @@
 		opacity: 0;
 		background-color: #fff;
 		width: 100%;
-		padding: 20px 20px 40px;
-    border-radius: 0 0 20px 20px;
-		transition: transform 0.24s, opacity .24s;
+		padding: 40px 20px 40px;
+		border-radius: 0 0 20px 20px;
+		transition: transform 0.24s, opacity 0.24s;
 		transform-origin: top;
 
 		&-item {
 			list-style: none;
 			display: block;
 			font-size: 16px;
-			font-weight: 500;
+			font-weight: 700;
 			border-bottom: 1.5px dashed #dedede;
 			cursor: pointer;
 
@@ -83,11 +83,19 @@
 			span {
 				display: block;
 				gap: 18px;
-				padding: 10px 20px 10px 0;
+				padding: 19px 20px 23px 0;
 				color: $dark-color;
+				white-space: nowrap;
 				transition: color 0.24s;
-				&:hover {
-					color: $primary-color;
+			}
+
+			&[data-has-children='true'] {
+				> a {
+					&:after {
+						content: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="17" height="10" viewBox="0 0 19 11" fill="none"><path d="M0.0477493 1.06481C0.0487613 0.798616 0.156176 0.532693 0.369691 0.320306C0.79672 -0.104469 1.43479 -0.102766 1.85858 0.324278L9.01005 7.53065L16.2162 0.362582C16.6432 -0.0621923 17.2813 -0.0604899 17.7051 0.366555C18.1289 0.793599 18.1265 1.43249 17.6995 1.85726L9.74603 9.7687C9.319 10.1935 8.68086 10.1918 8.25707 9.76473L0.364024 1.81101C0.152128 1.59749 0.0467373 1.331 0.0477493 1.06481Z" fill="%23252B42"/></svg>');
+						display: inline-block;
+						margin-left: 0.5em;
+					}
 				}
 			}
 		}
@@ -104,6 +112,7 @@
 			a {
 				padding-top: 0;
 				padding-left: 20px;
+				font-weight: 500;
 				color: $dark-color;
 				transition: color 0.24s;
 				&:hover {
@@ -117,6 +126,10 @@
 		.navbar-menu {
 			transform: translateY(-21px) scaleY(1);
 			opacity: 1;
+
+			@media screen and (min-width: $md) {
+				transform: translateY(0) scaleY(1);
+			}
 		}
 
 		.navbar-button {
@@ -152,15 +165,16 @@
 	}
 
 	@media screen and (min-width: $sm) {
-    border-radius: 20px;
-    width: calc(100% - 30px);
-    
-    &:before{
-      border-radius: 20px;
-    }
+		border-radius: 20px;
+		width: calc(100% - 30px);
+
+		&:before {
+			border-radius: 20px;
+		}
 	}
 
 	@media screen and (min-width: $md) {
+		top: 25px;
 		box-shadow: none;
 
 		&-button {
@@ -170,7 +184,7 @@
 		&-submenu {
 			position: absolute;
 			top: 100%;
-			right: 0;
+			right: -30%;
 			display: block;
 			min-width: max-content;
 			background-color: #fff;
@@ -225,7 +239,7 @@
 			z-index: 1;
 			display: flex;
 			align-items: center;
-      background-color: transparent;
+			background-color: transparent;
 			gap: 20px;
 			width: auto;
 			padding: 0;
@@ -252,18 +266,12 @@
 						padding: 5px;
 					}
 				}
-				&:last-of-type {
-					margin-left: -20px;
 
+				&[data-is-higlited='primary'] {
 					a {
-						padding: 5px;
-					}
-				}
-
-				&[data-is-higlited='true'] {
-					a {
+						display: block;
 						color: $light-color;
-						font-weight: 700;
+						font-weight: 500;
 						padding: 12px 38px;
 						background-color: $primary-color;
 						border-radius: 100px;
@@ -277,6 +285,31 @@
 						}
 					}
 				}
+				&[data-is-higlited='outline'] {
+					a {
+						display: block;
+						color: $primary-color;
+						font-weight: 500;
+						padding: 10px 38px;
+						background-color: transparent;
+						border: 2px solid $primary-color;
+						border-radius: 100px;
+						transition: background-color 0.24s, color 0.24s;
+
+						&:hover {
+							color: $light-color;
+							background-color: $primary-color;
+						}
+					}
+				}
+			}
+		}
+	}
+
+	@media screen and (min-width: $lg) {
+		:global {
+			.container {
+				padding: 26px 32px;
 			}
 		}
 	}

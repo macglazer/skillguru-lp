@@ -2,12 +2,12 @@
 import React, {useState} from 'react';
 import {Link} from 'gatsby';
 // Styles
-import * as styles from '../../Navbar.module.scss'
+import * as styles from '../../Navbar.module.scss';
 
 interface LinkProps {
 	text: string;
 	link: string;
-	isHiglited?: boolean;
+	isHiglited?: 'primary' | 'outline';
 }
 
 export interface NavbarItemProps extends LinkProps {
@@ -22,7 +22,10 @@ const NavbarItem = (props: NavbarItemProps) => {
 	const expandHandler = () => setIsExpanded(!isExpanded);
 
 	return (
-		<li className={styles.navbarMenuItem} data-is-higlited={isHiglited}>
+		<li
+			className={styles.navbarMenuItem}
+			data-is-higlited={isHiglited}
+			data-has-children={!!children?.length}>
 			{!!link ? (
 				<Link
 					onClick={() => {
