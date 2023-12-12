@@ -108,6 +108,7 @@
 			"@fonts/*": ["src/fonts/*"],
 			"@hooks/*": ["src/utils/hooks/*"],
 			"@icons/*": ["src/assets/icons/*"],
+			"@images/*": ["src/assets/images/*"],
 			"@sections/*": ["src/sections/*"]
 		}
 	},

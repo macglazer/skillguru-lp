@@ -1,0 +1,67 @@
+@use '@styles/variables' as *;
+
+.wrapper {
+	position: relative;
+	z-index: 1;
+	margin-left: -15px;
+	margin-right: -15px;
+	margin-bottom: -20px;
+	padding: 40px 20px 82px;
+	background-color: #3b5092;
+	border-radius: 20px;
+	background-image: url('@icons/dots.svg');
+	background-repeat: no-repeat;
+	background-position: 98% 10%;
+
+	.title {
+		margin-bottom: 32px;
+	}
+
+	@media screen and (min-width: $sm) {
+		margin-left: 0;
+		margin-right: 0;
+		margin-bottom: -40px;
+	}
+
+	@media screen and (min-width: $md) {
+		padding: 60px 32px 92px;
+		margin-top: 78px;
+		margin-bottom: -80px;
+
+		.title {
+			margin-bottom: 44px;
+		}
+	}
+
+	@media screen and (min-width: $lg) {
+		padding: 66px 32px 122px 63px;
+		background-image: url('@images/write-bg.png');
+		background-size: 30%;
+		background-position: 104% -20px;
+		margin-bottom: -124px;
+
+		.title {
+			margin-bottom: 52px;
+		}
+	}
+	@media screen and (min-width: $lg) {
+		margin-bottom: -150px;
+	}
+}
+
+.list {
+	max-width: 780px;
+	li {
+		display: flex;
+		gap: 12px;
+		margin-top: 16px;
+
+		&:before {
+			content: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" viewBox="0 0 26 26" fill="none"><circle cx="12.5084" cy="13.101" r="12.5082" transform="rotate(90 12.5084 13.101)" fill="%23E17596"/><path d="M6.11279 10.5145C6.11279 10.3274 6.18768 10.1403 6.33738 9.99062C6.63678 9.69128 7.08585 9.69128 7.38525 9.99062L12.4376 15.0421L17.49 9.99062C17.7894 9.69128 18.2385 9.69128 18.5379 9.99062C18.8373 10.29 18.8373 10.739 18.5379 11.0384L12.9616 16.6137C12.6622 16.913 12.2131 16.913 11.9137 16.6137L6.33738 11.0384C6.18768 10.8887 6.11279 10.7016 6.11279 10.5145Z" fill="white"/></svg>');
+		}
+
+		@media screen and (min-width: $md) {
+			gap: 32px;
+		}
+	}
+}

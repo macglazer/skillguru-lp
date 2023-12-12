@@ -41,18 +41,28 @@
 		}
 		@media screen and (min-width: $sm) {
 			grid-template-columns: 1fr 1fr 1fr;
+			padding-top: 74px;
 
-			> .separator{
+			> .separator {
 				grid-column: 2/4;
 			}
 		}
 
 		@media screen and (min-width: $md) {
 			grid-template-columns: auto 1fr auto auto auto;
+			padding-top: 124px;
 
-			> .separator{
+			> .separator {
 				grid-column: span 1;
 			}
+		}
+
+		@media screen and (min-width: $lg) {
+			padding-top: 184px;
+		}
+
+		@media screen and (min-width: $lg) {
+			padding-top: 204px;
 		}
 	}
 }

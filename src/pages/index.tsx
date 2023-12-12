@@ -10,6 +10,7 @@ import Sessions from '@sections/HomePage/Sessions/Sessions';
 import Mentors from '@sections/HomePage/Mentors/Mentors';
 import Meetings from '@sections/HomePage/Meetings/Meetings';
 import About from '@sections/HomePage/About/About';
+import WriteToMentor from '@sections/HomePage/WriteToMentor/WriteToMentor';
 // Types
 import {Tag} from '@customTypes/tags';
 
@@ -23,6 +24,7 @@ const IndexPage: React.FC<PageProps> = () => {
 				<Meetings />
 				<Mentors />
 				<About />
+				<WriteToMentor />
 			</Container>
 		</>
 	);
