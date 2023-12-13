@@ -49,20 +49,40 @@
 		}
 
 		@media screen and (min-width: $md) {
-			grid-template-columns: auto 1fr auto auto auto;
+			grid-template-columns: auto 1fr auto auto;
 			padding-top: 124px;
 
 			> .separator {
 				grid-column: span 1;
 			}
+
+			> *:nth-child(6) {
+				grid-column: -2/-1;
+			}
+			> *:nth-child(5) {
+				grid-column: -3/-2;
+			}
 		}
 
 		@media screen and (min-width: $lg) {
+			grid-template-columns: auto 1fr auto auto auto;
 			padding-top: 184px;
+
+			> *:nth-child(6) {
+				grid-column: -2/-1;
+			}
+			> *:nth-child(5) {
+				grid-column: span 1;
+			}
 		}
 
-		@media screen and (min-width: $lg) {
+		@media screen and (min-width: $xl) {
+			grid-template-columns: auto 1fr auto auto auto auto;
 			padding-top: 204px;
+
+			> *:nth-child(6) {
+				grid-column: span 1;
+			}
 		}
 	}
 }

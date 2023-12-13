@@ -16,31 +16,86 @@ import {FontColors} from '@customTypes/main';
 const Footer = () => {
 	const linkGroups = [
 		{
-			title: 'Kategoria',
+			title: 'Kontakt',
 			links: [
 				{
 					id: 'l01',
-					text: 'test',
+					text: 'Napisz do nas',
+					link: '/',
+				},
+				{
+					id: 'l02',
+					text: 'Zgłoś uwagę',
+					link: '/',
+				},
+				{
+					id: 'l03',
+					text: 'Team',
 					link: '/',
 				},
 			],
 		},
 		{
-			title: 'Jak to działa?',
+			title: 'Artykuły',
 			links: [
 				{
 					id: 'l01',
-					text: 'test',
+					text: 'Blog',
+					link: '/',
+				},
+				{
+					id: 'l02',
+					text: 'Historie mentorów',
 					link: '/',
 				},
 			],
 		},
 		{
-			title: 'O nas',
+			title: 'Centrum pomocy',
 			links: [
 				{
 					id: 'l01',
-					text: 'test',
+					text: 'Konto i profil',
+					link: '/',
+				},
+				{
+					id: 'l02',
+					text: 'Płatność i rozliczenia',
+					link: '/',
+				},
+				{
+					id: 'l03',
+					text: 'Warunki i zasady',
+					link: '/',
+				},
+				{
+					id: 'l04',
+					text: 'Jak to działa',
+					link: '/',
+				},
+			],
+		},
+		{
+			title: 'Konto',
+			links: [
+				{
+					id: 'l01',
+					text: 'Logowanie',
+					link: '/',
+				},
+				{
+					id: 'l02',
+					text: 'Resetowanie hasła',
+					link: '/',
+				},
+				{
+					id: 'l03',
+					text: 'Rejestracja',
+					link: '/',
+				},
+				{
+					id: 'l04',
+					text: 'Aplikuj jako mentor',
 					link: '/',
 				},
 			],
