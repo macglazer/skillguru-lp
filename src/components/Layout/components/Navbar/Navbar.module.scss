@@ -1,14 +1,13 @@
 @use '@styles/variables' as *;
 
 .navbar {
-	position: fixed;
-	left: 50%;
-	top: 0;
+	position: relative;
 	width: 100%;
+	margin: 0 auto;
+	margin-bottom: 20px;
 	max-width: $xl;
 	z-index: 999;
 	background-color: $gray-color;
-	transform: translateX(-50%);
 
 	&:before {
 		content: '';
@@ -174,6 +173,7 @@
 	}
 
 	@media screen and (min-width: $md) {
+		margin-top: 25px;
 		box-shadow: none;
 
 		&-button {

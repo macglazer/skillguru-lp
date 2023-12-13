@@ -10,7 +10,7 @@ import {TitleVariant, TitleTag} from '@components/typography/Title/Title';
 import * as styles from './FlippedCard.module.scss';
 
 interface FlippedCardProps {
-	title: string;
+	title: React.ReactNode;
 	icon: React.ReactNode;
 	color: string;
 	content: {

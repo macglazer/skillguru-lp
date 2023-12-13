@@ -1,5 +1,6 @@
 // Libraries
 import React, {useMemo, useState} from 'react';
+import {Link} from 'gatsby';
 // Components
 import Container from '@components/Container/Container';
 import {Title, Text} from '@components/typography';
@@ -12,10 +13,14 @@ import {CV, Care, Message, Thinking} from '@icons/_index';
 import * as styles from './Sessions.module.scss';
 
 const Sessions = () => {
-	const [maxCards, setMaxCards] = useState(4);
 	const flippedCards = [
 		{
-			title: 'test',
+			title: (
+				<>
+					Przygotowanie <br />
+					do rozmowy <br />o pracę
+				</>
+			),
 			icon: <Thinking />,
 			color: '#92BDF6',
 			content: {
@@ -26,9 +31,14 @@ const Sessions = () => {
 			},
 		},
 		{
-			title: 'Praca nad Twoim CV',
+			title: (
+				<>
+					Praca nad
+					<br /> Twoim CV
+				</>
+			),
 			icon: <CV />,
-			color: '#E17596',
+			color: '#E985A4',
 			content: {
 				title: 'Informacja o tej sesji',
 				text:
@@ -37,7 +47,12 @@ const Sessions = () => {
 			},
 		},
 		{
-			title: 'Konsultacja z ekspertem',
+			title: (
+				<>
+					Konsultacja z <br />
+					ekspertem
+				</>
+			),
 			icon: <Message />,
 			color: '#F0DA69',
 			content: {
@@ -48,7 +63,7 @@ const Sessions = () => {
 			},
 		},
 		{
-			title: 'Plan na naukę',
+			title: <span style={{paddingTop: '15px'}}>Plan na naukę</span>,
 			icon: <Care />,
 			color: '#A3DAC3',
 			content: {
@@ -59,17 +74,6 @@ const Sessions = () => {
 			},
 		},
 	];
-
-	const isMoreToLoad: boolean = useMemo(
-		() => flippedCards.length > maxCards,
-		[flippedCards, maxCards]
-	);
-
-	const loadMoreHandler = (): void => {
-		if (!isMoreToLoad) return;
-
-		setMaxCards(maxCards + 4);
-	};
 
 	return (
 		<Container as={Tag.Section} classes={styles.wrapper}>
@@ -84,15 +88,13 @@ const Sessions = () => {
 				<strong>uzyskaj wsparcie na ważne tematy, które Cię interesują</strong>
 			</Text>
 			<div className={styles.cardsWrapper}>
-				{flippedCards.map((item) => (
-					<FlippedCard key={item.title} {...item} />
+				{flippedCards.map((item, index) => (
+					<FlippedCard key={index} {...item} />
 				))}
 			</div>
-			{isMoreToLoad && (
-				<button className={styles.more} onClick={loadMoreHandler}>
-					Zobacz więcej
-				</button>
-			)}
+			<Link className={styles.more} to='/'>
+				Zobacz więcej
+			</Link>
 		</Container>
 	);
 };

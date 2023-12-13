@@ -18,7 +18,6 @@ const Layout = (props: {children: any}) => {
 	return (
 		<>
 			<Navbar />
-			<div className={styles.spacer} />
 			{props.children}
 			{showCookie && <Cookies />}
 			<Footer />
