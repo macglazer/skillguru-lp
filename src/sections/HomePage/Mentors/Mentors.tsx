@@ -22,7 +22,7 @@ const Mentors = () => {
 			infinite: true,
 			arrows: false,
 			autoplay: true,
-			autoplaySpeed: 4000,
+			autoplaySpeed: 2000,
 			slidesToShow: width / 297,
 			slidesToScroll: 1,
 		}),
@@ -35,8 +35,8 @@ const Mentors = () => {
 			Array(20).fill({
 				id: Math.random(),
 				range: 9,
-				name: 'Tester Testowicz',
-				position: 'CEO Test',
+				name: 'Jan Kielwczyk',
+				position: 'Software developer with Java',
 				companyLogo:
 					'https://cdn.pixabay.com/photo/2015/05/26/09/37/paypal-784404_1280.png',
 				companyName: 'Test',

@@ -15,7 +15,7 @@ const Sessions = () => {
 	const [maxCards, setMaxCards] = useState(4);
 	const flippedCards = [
 		{
-			title: 'test',
+			title: 'Przygotowanie do rozmowy o pracę',
 			icon: <Thinking />,
 			color: '#92BDF6',
 			content: {

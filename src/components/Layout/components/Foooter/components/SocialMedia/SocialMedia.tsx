@@ -1,7 +1,7 @@
 // Libraries
 import React from 'react';
 // Icons
-import {Facebook} from '@icons/_index';
+import {Facebook,Linked} from '@icons/_index';
 // Styles
 import * as styles from './SocialMedia.module.scss';
 
@@ -10,6 +10,12 @@ const SocialMedia = () => {
 		{
 			id: 'fb01',
 			icon: <Facebook />,
+			label: 'Facebook',
+			href: 'https://www.facebook.com',
+		},
+		{
+			id: 'link1',
+			icon: <Linkedin />,
 			label: 'Facebook',
 			href: 'https://www.facebook.com',
 		},

@@ -15,7 +15,7 @@ import * as styles from './Meetings.module.scss';
 const Meetings = () => {
 	return (
 		<SectionWrapper
-			title='Cykl spotkań - Mentoring'
+			title='Cykl spotkań - mentoring'
 			bgColor={SectionWrpperColor.Dark}
 			classes={styles.meetings}>
 			<div className={styles.container}>
@@ -27,7 +27,7 @@ const Meetings = () => {
 						Skorzystaj z <span data-color={FontColors.green}>Mentoringu:</span>
 					</Title>
 					<Text color={FontColors.light}>
-						Mentorowanie może być satysfakcjonujące i stanowić formę rozwoju
+						Mentoring może być satysfakcjonujący i stanowić formę rozwoju
 						osobistego. Niektórzy eksperci chcą dzielić się swoją wiedzą i pomagać
 						innym.
 					</Text>
