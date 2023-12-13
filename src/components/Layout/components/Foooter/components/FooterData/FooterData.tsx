@@ -16,10 +16,13 @@ const FooterData = () => {
 				<strong>Skillguru</strong>
 			</Text>
 			<Text classes={styles.footerDataText} >
-				<a href='http://' target='_blank' rel='noopener noreferrer'>
+				<a href='http://skillguru.pl' target='_blank' rel='noopener noreferrer'>
 					Adres siedziby
 				</a>
-				<a href='tel:+'>+48 000 000 000</a>
+				<a href='address'>ul. Warsztatowa 14 A</a>
+				<a href='address'>Wrocław 50-469</a>
+				<a href='nip'>NIP: 498-752-12-11</a>
+				<a href='tel:+'>tel: +48 798-771-467</a>
 				<a href='mailto:'>info@skillguru.pl</a>
 			</Text>
 			<SocialMedia />

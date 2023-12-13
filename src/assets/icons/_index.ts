@@ -6,5 +6,6 @@ export {default as Care} from './Care';
 export {default as Message} from './Message';
 export {default as CV} from './CV';
 export {default as Facebook} from './Facebook';
+export {default as Linkedin} from './Linkedin';
 export {default as Close} from './Close';
 export {default as CookieSvg} from './CookieSvg';
