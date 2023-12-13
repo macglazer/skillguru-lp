@@ -4,17 +4,17 @@ import React from 'react';
 import * as styles from './MentroSmallCard.module.scss';
 
 export interface MentorSmallCardProps {
-  id: string;
-  companyLogo: string;
+	id: string;
+	companyLogo: string;
 	companyName: string;
-  name: string;
+	name: string;
 	position: string;
 	profileImg: string;
-  range: number;
+	range: number;
 }
 
 const MentorSmallCard = (props: MentorSmallCardProps) => {
-	const {name, position, profileImg, companyLogo, companyName, range} = props
+	const {name, position, profileImg, companyLogo, companyName, range} = props;
 
 	return (
 		<div className={styles.card}>
@@ -23,11 +23,11 @@ const MentorSmallCard = (props: MentorSmallCardProps) => {
 				<div className={styles.profile}>
 					<img src={profileImg} alt={name} />
 				</div>
-        <h3 className={styles.name}>{name}</h3>
-        <h4 className={styles.position}>{position}</h4>
-        <div className={styles.company}>
-          <img src={companyLogo} alt={companyName} />
-        </div>
+				<h3 className={styles.name}>{name}</h3>
+				<h4 className={styles.position}>{position}</h4>
+			</div>
+			<div className={styles.company}>
+				<img src={companyLogo} alt={companyName} />
 			</div>
 		</div>
 	);

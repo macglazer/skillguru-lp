@@ -19,20 +19,23 @@ const Mentors = () => {
 	const settings = useMemo(
 		() => ({
 			dots: false,
-			infinite: true,
 			arrows: false,
+			draggable: false,
 			autoplay: true,
+			slidesToShow: width / 232,
 			autoplaySpeed: 4000,
-			slidesToShow: width / 297,
-			slidesToScroll: 1,
+			speed: 4000,
+			infinite: true,
+			pauseOnHover: false,
+			cssEase: 'linear',
 		}),
 		[width]
 	);
 
 	useEffect(() => {
 		// TODO: Download Data from API
-		setMentorsList(
-			Array(20).fill({
+		setMentorsList([
+			...Array(5).fill({
 				id: Math.random(),
 				range: 9,
 				name: 'Tester Testowicz',
@@ -42,12 +45,23 @@ const Mentors = () => {
 				companyName: 'Test',
 				profileImg:
 					'https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_1280.png',
-			})
-		);
+			}),
+			...Array(5).fill({
+				id: Math.random(),
+				range: 8,
+				name: 'Tester Testowicz',
+				position: 'Product manager key advisorger key advisor modern',
+				companyLogo:
+					'https://cdn.pixabay.com/photo/2015/05/26/09/37/paypal-784404_1280.png',
+				companyName: 'Test',
+				profileImg:
+					'https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_1280.png',
+			}),
+		]);
 	}, []);
 
 	return (
-		<SectionWrapper title='Profile Mentorów'>
+		<SectionWrapper title='Profile Mentorów' classes={styles.wrapper}>
 			<Slider {...settings} className={styles.mentors}>
 				{mentorsList.map((item) => (
 					<MentorSmallCard key={item.id} {...item} />

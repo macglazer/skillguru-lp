@@ -1,31 +1,48 @@
 @use '@styles/variables' as *;
 
+.wrapper{
+	:global{
+		.container{
+			padding-bottom: 0!important;
+		}
+	}
+}
+
 .mentors {
 	width: calc(100% + 30px);
-  margin-left: -15px;
-  margin-top: 40px;
-	
-	:global{
-		.slick-track{
-			padding-bottom: 20px;
+	margin-left: -15px;
+
+	:global {
+		.slick-track {
+			padding-top: 40px;
+			padding-bottom: 60px;
+
+			> div{
+				height: 100%;
+			}
 		}
 	}
 
 	@media screen and (min-width: $sm) {
 		width: calc(100vw - 15px);
 		margin-left: -30px;
-	}
 
-  @media screen and (min-width: $md) {
-    margin-top: 60px;
-		
-		:global{
-			.slick-track{
-				padding-bottom: 30px;
+		:global {
+			.slick-track {
+				padding-bottom: 70px;
 			}
 		}
-  }
+	}
 
+	@media screen and (min-width: $md) {
+		:global {
+			.slick-track {
+				padding-top: 60px;
+				padding-bottom: 80px;
+			}
+		}
+	}
+	
 	@media screen and (min-width: ($xl + 45px)) {
 		margin-left: calc((100vw - $xl + 15px) / 2 * -1);
 	}
