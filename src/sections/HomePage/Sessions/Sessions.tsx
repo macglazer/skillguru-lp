@@ -84,7 +84,7 @@ const Sessions = () => {
 				Sesje 1:1 z Mentorem
 			</Title>
 			<Text classes={styles.text}>
-				Zarezerwuj mentora na eojpdyńczą sesję 1:1 i{' '}
+				Jeżeli nie jesteś pewien, czy mentoring jest dla Ciebie, zarezerwuj mentora na pojpdyńczą sesję 1:1 i{' '}
 				<strong>uzyskaj wsparcie na ważne tematy, które Cię interesują</strong>
 			</Text>
 			<div className={styles.cardsWrapper}>
